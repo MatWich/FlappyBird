@@ -5,7 +5,7 @@
 
 - [] Background
 - [] Bird
-- [] Base & movement
+- [x] Base & movement
 - [] Pipes
 - [] Controls
 - [] collision detection

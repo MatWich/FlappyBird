@@ -1,6 +1,7 @@
 import pygame
 pygame.init()
 from config import *
+from classes.base import Base
 
 class Game:
     def __init__(self):
@@ -11,6 +12,7 @@ class Game:
 
     # method to call
     def mainLoop(self):
+        self.setUp()
         while self.run:
             self.clock.tick(FPS)
             self.events()
@@ -18,17 +20,30 @@ class Game:
 
     # setting up all game objects
     def setUp(self):
-        pass
+        self.base = Base(BASE_Y)
 
     # function contains eg. collision detection
     def events(self):
-        self.drawBg()
+        self.update()
         self.controls()
+        self.movements()
         
 
+    # this method will handle all obj movements
+    def movements(self):
+        self.base.move()
+
+
     """Drawings"""
+    def update(self):
+        self.drawBg()
+        self.drawBase()
+
     def drawBg(self):
         self.screen.blit(BG_IMGS[0], (0,0))
+
+    def drawBase(self):
+        self.base.draw(self.screen)
 
         # key controls
     def controls(self):
