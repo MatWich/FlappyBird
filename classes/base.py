@@ -13,8 +13,8 @@ class Base:
         self.x2 = self.imageWidth
 
     def move(self):
-        self.x1 -= BG_VEL
-        self.x2 -= BG_VEL
+        self.x1 -= GAME_VEL
+        self.x2 -= GAME_VEL
 
         # if first base is out of screen
         if self.x1 + self.imageWidth < 0:

@@ -3,8 +3,8 @@
 
 # TO DO:
 
-- [] Background
-- [] Bird
+- [x] Background
+- [x] Bird
 - [x] Base & movement
 - [] Pipes
 - [] Controls
